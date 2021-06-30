@@ -1,0 +1,84 @@
+:root {
+    --part_title: #545454;
+    --part_info: #8c9597; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif; }
+
+.part-1 {
+    background-image: url('images/bg_image.webp');
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+
+}
+.part-wrapper {
+    padding-top: 60px;
+    text-align: center;
+}
+.part-wrapper h1 {
+    font-size: 35px;
+    line-height: 38px;
+    color: var(--part_title);
+    font-weight: 700;
+}
+.part-wrapper p {
+    margin-top: 7px;
+    color: var(--part_info);
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    line-height: 26px;
+}
+
+.part-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 65px;
+}
+.part-images .part-image {
+    width: 25%; }
+.part-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.28s;
+    cursor: pointer;
+}
+
+.part-image img:hover {
+    opacity: 0.5;
+    /* background-image: rgba(1, 255, 0, 0.5); */
+
+} 
+
+
+/* opacity  => ya'ni obyektlarni to'yinganlik darajasini belgilaydi, qabul qiladigan 
+qiymati [0, 1] oraliqda bo'ladi */
+
+
+/* responsive vyortska */
+
+@media only screen and (max-width: 768px) {
+    .part-images .part-image {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .part-images {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .part-images .part-image {
+        width: 100%;
+    }
+}
